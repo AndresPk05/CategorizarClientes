@@ -2,6 +2,16 @@
   <section class="card">
     <p>Por favor seleccione el archivo tipo csv que contiene la informacion de los clientes</p>
     <label for="cargar-clientes">Buscar Archivo</label>
-    <input type="file" name="file" id="cargar-clientes" accept=".csv">
+    <input type="file" name="file" id="cargar-clientes" accept=".csv" (change)="LoadFile($event)">
   </section>
+</article>
+<article class="container">
+  @if (clients.length > 0) {
+    <section>
+      <p>Se han cargado {{clients.length}} registros, se mostrara acontinuacion los primeros 10 registros.</p>
+      <app-grid-clients [clients]="clients.slice(0,10)"></app-grid-clients>
+    </section>
+  }@else {
+    <p>No se han cargado los clientes</p>
+  }
 </article>

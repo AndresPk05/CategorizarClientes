@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>IdCustomer</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Annual Income</th>
+      <th>Spending Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (client of clients; track $index) {
+      <tr>
+        <td>{{client.id}}</td>
+        <td>{{client.gender}}</td>
+        <td>{{client.age}}</td>
+        <td>{{client.annualIncome}}</td>
+        <td>{{client.score}}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+
