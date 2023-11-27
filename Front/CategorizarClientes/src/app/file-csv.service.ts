@@ -29,7 +29,7 @@ export class FileCsvService {
 
       return client;
     });
-
+    console.log(JSON.stringify(customers));
     return customers;
   }
 
