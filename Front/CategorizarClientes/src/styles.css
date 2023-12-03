@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-.prymary{
+.primary{
   font-size: 1em;
   color:white;
   background-color: #2D9596;
+  padding: 0.5em;
+  border: none;
 }
 
 .container{
@@ -10,9 +12,9 @@
 }
 
 body{
-  font-family: 'Lato', sans-serif;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Lato', sans-serif !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Quicksand', sans-serif !important;
 }
 
 .icon-large{

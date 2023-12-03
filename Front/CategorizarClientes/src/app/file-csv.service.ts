@@ -11,7 +11,7 @@ export class FileCsvService {
     let data = csv.split('\r\n');
     if(data.length === 0)
       return [];
-    debugger;
+
     let resultValidation = this.ValidateCsvLoad(data[0]);
     if(!resultValidation)
       return [];
@@ -29,7 +29,8 @@ export class FileCsvService {
 
       return client;
     });
-    console.log(JSON.stringify(customers));
+
+    customers = customers.filter(x => x.id !== 0)
     return customers;
   }
 

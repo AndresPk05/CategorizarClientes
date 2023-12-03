@@ -1,1 +1,17 @@
-<p>grafic works!</p>
+<h1>Resultado Modelo</h1>
+
+<div class="chart-container">
+  <canvas  id="MyChart" >{{ chart }}</canvas>
+</div>
+@if (resultGrafic.length > 0) {
+  <section>
+    <p>El modelo a genera los siguientes resultados: </p>
+    @for (item of resultGrafic; track $index) {
+      <section>
+        <p>Nombre Grupo: {{item.label}}</p>
+        <p>Numero de Clientes: {{item.countUsers}}</p>
+        <hr>
+      </section>
+    }
+  </section>
+}

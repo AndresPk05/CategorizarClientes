@@ -15,3 +15,13 @@
     <p>No se han cargado los clientes</p>
   }
 </article>
+<section class="container">
+  <button type="button" class="primary button_load_data" (click)="SaveClients()">Cargar Informacion al Modelo</button>
+</section>
+
+@if (labels.length > 0 && dataGrouped) {
+  <section class="container">
+    <app-grafic [clients]="dataGrouped" [labels]="labels"></app-grafic>
+  </section>
+} @else {
+}

@@ -1,6 +1,6 @@
-from pydantic import BaseModel
 
-class Row(BaseModel):
-    x: int
-    y: str
-    label: int
+class Row:
+  def __init__(self, x, y, label) -> None:
+     self.x = x
+     self.y = y
+     self.label = label
